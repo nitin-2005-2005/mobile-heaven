@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mobile Heaven - Premium Mobile Accessories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-mobile-alt"></i> The Mobile Heaven</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#covers">Mobile Covers</a></li>
+                    <li><a href="#glass-guards">Glass Guards</a></li>
+                    <li><a href="#laminations">Laminations</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <button id="login-btn" class="btn btn-outline">Login</button>
+                <div class="user-info" id="user-info" style="display: none;">
+                    <div class="user-avatar" id="user-avatar">U</div>
+                    <span id="user-name">User</span>
+                    <button id="logout-btn" class="btn btn-outline">Logout</button>
+                </div>
+                <div class="cart-icon">
+                    <span id="cart-count">0</span>
+                    <button id="cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Premium Mobile Accessories</h2>
+            <p>Protect and enhance your mobile experience with our premium accessories</p>
+            <button class="cta-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Mobile Covers Section - 15 Options -->
+    <section id="covers" class="section">
+        <div class="container">
+            <h2 class="section-title">Mobile Covers</h2>
+            <div class="products-grid">
+                <!-- 15 Cover Options -->
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://tse4.mm.bing.net/th/id/OIF.kjlT9b9398LaiVGFe2jb9A?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hard Case Cover">
+                    <h3>Hard Case Cover</h3>
+                    <p>Durable protection with stylish designs</p>
+                    <span class="price">$12.99</span>
+                    <button class="add-to-cart" data-product="Hard Case Cover" data-price="12.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP._EPZYLF91YelF_sm2asArAHaHa?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Silicone Case">
+                    <h3>Silicone Case</h3>
+                    <p>Soft, flexible and shock-absorbent</p>
+                    <span class="price">$15.99</span>
+                    <button class="add-to-cart" data-product="Silicone Case" data-price="15.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.iKXMpXKjeljmjesfCtdzZAHaHa?cb=ucfimgc2&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Leather Case">
+                    <h3>Leather Case</h3>
+                    <p>Premium leather with elegant finish</p>
+                    <span class="price">$24.99</span>
+                    <button class="add-to-cart" data-product="Leather Case" data-price="24.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://th.bing.com/th/id/OIP.0b8OYgKeD34Bi9Godq0ApwHaHa?w=180&h=203&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3" alt="Transparent Case">
+                    <h3>Transparent Case</h3>
+                    <p>Show off your phone's original design</p>
+                    <span class="price">$10.99</span>
+                    <button class="add-to-cart" data-product="Transparent Case" data-price="10.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://th.bing.com/th/id/OIP.Cf8ZHLPO7loVOFA7s4eiugHaHa?w=212&h=212&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3" alt="Wallet Case">
+                    <h3>Wallet Case</h3>
+                    <p>Built-in card slots and money pocket</p>
+                    <span class="price">$18.99</span>
+                    <button class="add-to-cart" data-product="Wallet Case" data-price="18.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="data:image/webp;base64,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" alt="Armor Case">
+                    <h3>Armor Case</h3>
+                    <p>Military-grade drop protection</p>
+                    <span class="price">$22.99</span>
+                    <button class="add-to-cart" data-product="Armor Case" data-price="22.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://th.bing.com/th/id/OIP.abY-xeg1klRZ5MmhFJJgQgHaHa?w=148&h=180&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3 "alt ="Bumper Case">
+                    <h3>Bumper Case</h3>
+                    <p>Minimalist edge protection</p>
+                    <span class="price">$16.99</span>
+                    <button class="add-to-cart" data-product="Bumper Case" data-price="16.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://th.bing.com/th/id/OIP.Ocg9Pj1S-Cxs-PDuY2ZXNwHaIE?w=174&h=189&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3" alt="Flip Case">
+                    <h3>Flip Case</h3>
+                    <p>Full coverage with flip cover</p>
+                    <span class="price">$20.99</span>
+                    <button class="add-to-cart" data-product="Flip Case" data-price="20.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://th.bing.com/th?q=Rubber+Case+Mobile&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=1.3&pid=InlineBlock&rm=3&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247" alt="Designer Case">
+                    <h3>Designer Case</h3>
+                    <p>Exclusive artistic designs</p>
+                    <span class="price">$25.99</span>
+                    <button class="add-to-cart" data-product="Designer Case" data-price="25.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://th.bing.com/th/id/OIP.aOVrKipdqAZq-w070KKgIAHaHa?w=220&h=220&c=7&r=0&o=7&cb=ucfimgc2&dpr=1.3&pid=1.7&rm=3" alt="Rugged Case">
+                    <h3>Rugged Case</h3>
+                    <p>Heavy-duty outdoor protection</p>
+                    <span class="price">$28.99</span>
+                    <button class="add-to-cart" data-product="Rugged Case" data-price="28.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://images.unsplash.com/photo-1601593346961-ef0a6ffdc5e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Slim Case">
+                    <h3>Slim Case</h3>
+                    <p>Ultra-thin lightweight protection</p>
+                    <span class="price">$14.99</span>
+                    <button class="add-to-cart" data-product="Slim Case" data-price="14.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Carbon Fiber Case">
+                    <h3>Carbon Fiber Case</h3>
+                    <p>Premium carbon fiber material</p>
+                    <span class="price">$32.99</span>
+                    <button class="add-to-cart" data-product="Carbon Fiber Case" data-price="32.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://images.unsplash.com/photo-1606112219348-204d39d13c0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Wooden Case">
+                    <h3>Wooden Case</h3>
+                    <p>Natural wood finish</p>
+                    <span class="price">$29.99</span>
+                    <button class="add-to-cart" data-product="Wooden Case" data-price="29.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Metallic Case">
+                    <h3>Metallic Case</h3>
+                    <p>Shiny metallic appearance</p>
+                    <span class="price">$26.99</span>
+                    <button class="add-to-cart" data-product="Metallic Case" data-price="26.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="covers">
+                    <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Gel Case">
+                    <h3>Gel Case</h3>
+                    <p>Soft gel-like comfortable grip</p>
+                    <span class="price">$11.99</span>
+                    <button class="add-to-cart" data-product="Gel Case" data-price="11.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glass Guards Section - 5 Options -->
+    <section id="glass-guards" class="section">
+        <div class="container">
+            <h2 class="section-title">Glass Guards</h2>
+            <div class="products-grid">
+                <div class="product-card clickable-product" data-category="glass">
+                    <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tempered Glass">
+                    <h3>Tempered Glass</h3>
+                    <p>9H hardness, crystal clear protection</p>
+                    <span class="price">$8.99</span>
+                    <button class="add-to-cart" data-product="Tempered Glass" data-price="8.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="glass">
+                    <img src="https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Privacy Glass">
+                    <h3>Privacy Glass</h3>
+                    <p>Prevents side viewing of your screen</p>
+                    <span class="price">$12.99</span>
+                    <button class="add-to-cart" data-product="Privacy Glass" data-price="12.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="glass">
+                    <img src="https://images.unsplash.com/photo-1601593346961-ef0a6ffdc5e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Anti-Glare Glass">
+                    <h3>Anti-Glare Glass</h3>
+                    <p>Reduces reflections in bright light</p>
+                    <span class="price">$14.99</span>
+                    <button class="add-to-cart" data-product="Anti-Glare Glass" data-price="14.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="glass">
+                    <img src="https://images.unsplash.com/photo-1601593347605-b40ebd5b74b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Blue Light Filter">
+                    <h3>Blue Light Filter</h3>
+                    <p>Reduces eye strain during night use</p>
+                    <span class="price">$16.99</span>
+                    <button class="add-to-cart" data-product="Blue Light Filter" data-price="16.99">Add to Cart</button>
+                </div>
+                <div class="product-card clickable-product" data-category="glass">
+                    <img src="https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="3D Curved Glass">
+                    <h3>3D Curved Glass</h3>
+                    <p>Full edge-to-edge curved protection</p>
+                    <span class="price">$19.99</span>
+                    <button class="add-to-cart" data-product="3D Curved Glass" data-price="19.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Laminations Section - 10 Options -->
+    <section id="laminations" class="section">
+        <div class="container">
+            <h2 class="section-title">Laminations</h2>
+            <div class="laminations-container">
+                <div class="lamination-category">
+                    <h3>Front & Back Membrane</h3>
+                    <div class="lamination-grid">
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Front Membrane">
+                            <h4>Front Membrane</h4>
+                            <p>Protects screen from scratches</p>
+                            <span class="price">$5.99</span>
+                            <button class="add-to-cart" data-product="Front Membrane" data-price="5.99">Add to Cart</button>
+                        </div>
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Back Membrane">
+                            <h4>Back Membrane</h4>
+                            <p>Keeps back panel scratch-free</p>
+                            <span class="price">$5.99</span>
+                            <button class="add-to-cart" data-product="Back Membrane" data-price="5.99">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lamination-category">
+                    <h3>Matte & Glossy Laminations</h3>
+                    <div class="lamination-grid">
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1601593346961-ef0a6ffdc5e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Matte Lamination">
+                            <h4>Matte Lamination</h4>
+                            <p>Anti-fingerprint, non-reflective</p>
+                            <span class="price">$7.99</span>
+                            <button class="add-to-cart" data-product="Matte Lamination" data-price="7.99">Add to Cart</button>
+                        </div>
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1601593347605-b40ebd5b74b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Glossy Lamination">
+                            <h4>Glossy Lamination</h4>
+                            <p>High clarity with vibrant colors</p>
+                            <span class="price">$7.99</span>
+                            <button class="add-to-cart" data-product="Glossy Lamination" data-price="7.99">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lamination-category">
+                    <h3>Colorful Skins</h3>
+                    <div class="lamination-grid">
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Pattern Skin">
+                            <h4>Pattern Skins</h4>
+                            <p>Various designs and patterns</p>
+                            <span class="price">$9.99</span>
+                            <button class="add-to-cart" data-product="Pattern Skin" data-price="9.99">Add to Cart</button>
+                        </div>
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Solid Color Skin">
+                            <h4>Solid Color Skins</h4>
+                            <p>Vibrant solid color options</p>
+                            <span class="price">$9.99</span>
+                            <button class="add-to-cart" data-product="Solid Color Skin" data-price="9.99">Add to Cart</button>
+                        </div>
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1601593346961-ef0a6ffdc5e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Carbon Fiber Skin">
+                            <h4>Carbon Fiber Skin</h4>
+                            <p>Premium carbon fiber texture</p>
+                            <span class="price">$12.99</span>
+                            <button class="add-to-cart" data-product="Carbon Fiber Skin" data-price="12.99">Add to Cart</button>
+                        </div>
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1601593347605-b40ebd5b74b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Wooden Skin">
+                            <h4>Wooden Skin</h4>
+                            <p>Natural wood grain finish</p>
+                            <span class="price">$11.99</span>
+                            <button class="add-to-cart" data-product="Wooden Skin" data-price="11.99">Add to Cart</button>
+                        </div>
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Metallic Skin">
+                            <h4>Metallic Skin</h4>
+                            <p>Shiny metallic appearance</p>
+                            <span class="price">$13.99</span>
+                            <button class="add-to-cart" data-product="Metallic Skin" data-price="13.99">Add to Cart</button>
+                        </div>
+                        <div class="lamination-item clickable-product" data-category="lamination">
+                            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Glitter Skin">
+                            <h4>Glitter Skin</h4>
+                            <p>Sparkling glitter effect</p>
+                            <span class="price">$10.99</span>
+                            <button class="add-to-cart" data-product="Glitter Skin" data-price="10.99">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section id="accessories" class="section">
+        <div class="container">
+            <h2 class="section-title">Other Accessories</h2>
+            <div class="accessories-container">
+                <div class="accessory-category">
+                    <h3>Charging Solutions</h3>
+                    <div class="accessory-grid">
+                        <div class="accessory-item">
+                            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Adapter">
+                            <h4>Adapters</h4>
+                            <p>Fast charging adapters</p>
+                            <span class="price">$19.99</span>
+                            <button class="add-to-cart" data-product="Adapter" data-price="19.99">Add to Cart</button>
+                        </div>
+                        <div class="accessory-item">
+                            <img src="https://images.unsplash.com/photo-1601593346740-925612772716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Charging Cable">
+                            <h4>Charging Cables</h4>
+                            <p>Durable and fast charging cables</p>
+                            <span class="price">$12.99</span>
+                            <button class="add-to-cart" data-product="Charging Cable" data-price="12.99">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accessory-category">
+                    <h3>Audio</h3>
+                    <div class="accessory-grid">
+                        <div class="accessory-item">
+                            <img src="https://images.unsplash.com/photo-1601593346961-ef0a6ffdc5e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Overhead Headphones">
+                            <h4>Overhead Headphones</h4>
+                            <p>Premium sound quality</p>
+                            <span class="price">$49.99</span>
+                            <button class="add-to-cart" data-product="Overhead Headphones" data-price="49.99">Add to Cart</button>
+                        </div>
+                        <div class="accessory-item">
+                            <img src="https://images.unsplash.com/photo-1601593347605-b40ebd5b74b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Neckband">
+                            <h4>Neckbands</h4>
+                            <p>Comfortable around-the-neck design</p>
+                            <span class="price">$29.99</span>
+                            <button class="add-to-cart" data-product="Neckband" data-price="29.99">Add to Cart</button>
+                        </div>
+                        <div class="accessory-item">
+                            <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="AirPods">
+                            <h4>AirPods</h4>
+                            <p>Wireless earbuds with charging case</p>
+                            <span class="price">$79.99</span>
+                            <button class="add-to-cart" data-product="AirPods" data-price="79.99">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p><strong>Address:</strong> 123 Mobile Street, Tech City</p>
+                    <p><strong>Phone:</strong> +1 234 567 8900</p>
+                    <p><strong>Email:</strong> info@themobileheaven.com</p>
+                    <p><strong>Hours:</strong> Mon-Sat: 9AM-9PM, Sun: 10AM-6PM</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 The Mobile Heaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Detail Page (Hidden by default) -->
+    <div id="product-detail-page" class="product-detail-container" style="display: none;">
+        <button class="back-button" onclick="goBackToMain()"><i class="fas fa-arrow-left"></i> Back to Products</button>
+        <h1 class="detail-page-title" id="detail-page-title">Product Models</h1>
+        <p class="detail-page-subtitle" id="detail-page-subtitle">Select your phone model</p>
+        
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">All Models</button>
+            <button class="filter-btn" data-category="iphone">iPhone</button>
+            <button class="filter-btn" data-category="samsung">Samsung</button>
+            <button class="filter-btn" data-category="google">Google Pixel</button>
+            <button class="filter-btn" data-category="oneplus">OnePlus</button>
+            <button class="filter-btn" data-category="xiaomi">Xiaomi</button>
+        </div>
+
+        <div id="models-container">
+            <!-- Models will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="payment-methods">
+                <h3>Select Payment Method</h3>
+                <div class="payment-options">
+                    <div class="payment-option" data-method="credit-card">
+                        <i class="fas fa-credit-card"></i>
+                        <p>Credit Card</p>
+                    </div>
+                    <div class="payment-option" data-method="paypal">
+                        <i class="fab fa-paypal"></i>
+                        <p>PayPal</p>
+                    </div>
+                    <div class="payment-option" data-method="apple-pay">
+                        <i class="fab fa-apple-pay"></i>
+                        <p>Apple Pay</p>
+                    </div>
+                    <div class="payment-option" data-method="google-pay">
+                        <i class="fab fa-google-pay"></i>
+                        <p>Google Pay</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-total">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form class="login-form" id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="form-footer">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#">Create Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
